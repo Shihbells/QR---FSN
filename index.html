@@ -5,19 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
 </head>
 <body>
     <header>
+        <br>
         <h2>QR Code Generator</h2>
     </header>
-    <div class="container">
-        <input type="text" id="text" placeholder="Enter text..." class="input"/>
-        <button type="button" onclick="generateQR()">
-            Generate QR
-        </button>
-        <div id="qr-image">
-            <span class="error"></span><br/>
-            <img src="" id="img" style="display: none;"/>
+        
+    <div class="window active" style="max-width: 300px">
+        <div class="title-bar">
+            <div class="title-bar-text">Try me!</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+            
+        <div class="window-body has-space">
+
+            <br>
+            <p>note: words, letters, links works!</p>
+
+            <br>
+            <div class="input">
+                <input type="text" id="text" placeholder="Press Enter" aria-describedby="balloon-password">
+            </div>
+                    
+            <br>
+            <div role="tooltip" id="balloon-password" hidden="">Press Backspace to dismiss</div>
+
+            <br>
+            <div class="click">
+            <button onclick="generateQR()">Click me</button>
+            </div>
+
+            <div id="qr-image">
+                <span class="error"></span><br/>
+                <img src="" id="img" style="display: none;"/>
+            </div>
         </div>
     </div>
 
