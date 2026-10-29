@@ -4,53 +4,47 @@
     box-sizing: border-box;
 }
 
+.redaction-35-regular {
+  font-family: "Redaction 35", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-    background: #153786;
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://www.baltana.com/files/wallpapers-23/Grass-Field-Wallpaper-1920x1200-56677.jpg);
+    font-family: "Redaction 35";
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
 header, footer {
-    color: #d07c06;
+    color: green;
     width: 100%;
     text-align: center;
     padding: 10px 0;
 }
 
-.container {
-    padding: 40px 60px;
-    background: #d07c06;
-    display: flex;
-    align-items: center;
-    border: 5px solid rgba(190, 190, 190, 0);
+p {
+    padding-left: 10px;
+    font-size: 12px;
+    font: monospace;
+    font-style: italic;
+}
+
+.window {
+    border: 0px solid rgba(190, 190, 190, 0);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(100, 100, 100, 0.3);
-    flex-direction: column;
-    margin: auto; /* Center the container */
-    max-width: 800px; /* Set a max width for the container */
+    margin: auto;
 }
 
 .input {
-    padding: 12px 20px;
-    width: 300px;
-    margin-bottom: 20px;
-    border: 0;
-    border-radius: 5px;
+    padding-left: 23px;
 }
 
-button {
-    padding: 12px 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-radius: 5px;
-    background: black;
-    color: white;
-    font-family: monospace;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
+.click {
+    padding-left: 120px;
 }
 
 #qr-image {
@@ -58,7 +52,9 @@ button {
 }
 
 img {
-    margin-bottom: 20px;
+    scale: 60%;
+    box-shadow: 0 0 15px rgba(100, 100, 100, 0.3);
+    border-radius: 10px;
 }
 
 .error {
